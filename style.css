@@ -36,7 +36,13 @@
   --green: #192811;
   --blue: #a8c5d8;
   --grey: #ebeef4;
+--subtitle1: 4em;
 }
+
+h1, h2, h3, h4, h5, h6, p {
+margin: 0px;
+}
+
 /* header styling is here*/
 header {
   background-color: var(--green);
@@ -139,7 +145,6 @@ text-align: center;
 border:12px solid var(--green);
 border-radius: 5px;
 padding:10px;
-margin: 0px;
 grid-area: title;
 }
 .title-image span {
@@ -186,12 +191,12 @@ grid-template-areas:
 ". title title ."
 ". img1 about .";
 align-items: center;
+margin: 50px 0px 50px 0px;
  }
 .about h2 {
-  font-size: 4em;
+  font-size: var(--subtitle1);
   font-family: var(--headerfont);
   color: var(--green);
-margin: 50px 0px 0px 0px;
   text-align: center;
  grid-area: title;
 }
@@ -244,17 +249,16 @@ grid-area: about;
    font-size: 3em;
    font-family: var(--headerfont);
    color: var(--green);
- margin: 50px 0px 20px 0px;
    text-align: center;
   grid-area: title;
  }
 
  .about img {
- height: 200px;
+ max-height: 200px;
  width: auto;
  border-radius: 300px;
  border: 10px solid var(--green);
- margin: auto;
+ margin: 20px auto;
  grid-area: img1;
  }
  .about p {
@@ -262,4 +266,27 @@ grid-area: about;
    font-size: 1em;
  grid-area: about;
   }
+}
+
+/* Skills section begins here */
+
+.skills {
+  background-color: var(--green);
+  color: var(--grey);
+padding: 50px;
+}
+
+.skills h2 {
+  font-size: var(--subtitle1);
+font-family: var(--headerfont);
+text-align: center;
+}
+.skillwrap {
+display: flex;
+flex-wrap: wrap-reverse;
+justify-content: center;
+}
+.skills i {
+font-size: 5em;
+padding: 25px 50px;
 }

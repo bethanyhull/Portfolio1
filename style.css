@@ -363,3 +363,29 @@ padding: 20px;
    font-size: 2em;
 }
 }
+
+/* footer styling begins here */
+footer {
+background-image: url("img/Alice_Lake2.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+height: 150px;
+padding: 30px;
+}
+
+
+footer p {
+color: var(--green);
+font-family: var(--bodyfont);
+font-size: 1em;
+font-weight: bold;
+}
+
+footer a {
+text-decoration: none;
+color: var(--green);
+}
+.copyright {
+padding-top: 10px;
+}

@@ -35,7 +35,7 @@
   --bodyfont: 'Kefa-Regular';
   --green: #192811;
   --blue: #a8c5d8;
-  --grey: #86888b;
+  --grey: #ebeef4;
 }
 /* header styling is here*/
 header {
@@ -169,7 +169,7 @@ grid-area: title;
   height: 300px;
   }
   .title-image h1 {
-  font-size:3em;
+  font-size:4em;
   border:5px solid var(--green);
 }
   .title-image span {
@@ -178,3 +178,88 @@ grid-area: title;
 }
 
 /* Styling for the about section begins here */
+ .about {
+ display: grid;
+grid-template-columns: 200px auto auto 200px;
+grid-template-rows: auto auto;
+grid-template-areas:
+". title title ."
+". img1 about .";
+align-items: center;
+ }
+.about h2 {
+  font-size: 4em;
+  font-family: var(--headerfont);
+  color: var(--green);
+margin: 50px 0px 0px 0px;
+  text-align: center;
+ grid-area: title;
+}
+
+.about img {
+height: 300px;
+width: auto;
+border-radius: 300px;
+border: 10px solid var(--green);
+margin-right: 40px;
+grid-area: img1;
+}
+.about p {
+font-family: var(--bodyfont);
+  font-size: 1.3em;
+grid-area: about;
+ }
+@media only screen and (max-width: 1250px){
+  .about {
+  grid-template-columns: 80px auto auto 80px;
+}
+}
+@media only screen and (max-width: 992px){
+  .about {
+ grid-template-columns: 100px auto auto 100px;
+  }
+ .about h2 {
+   font-size: 2.5em;
+ }
+ .about img {
+ height: 250px;
+ border: 8px solid var(--green);
+ }
+ .about p {
+   font-size: 1em;
+  }
+}
+@media only screen and (max-width: 800px){
+  .about {
+  display: grid;
+ grid-template-columns: 20px auto 20px;
+ grid-template-rows: auto auto auto;
+ grid-template-areas:
+ ". title ."
+ ". img1 ."
+ ". about .";
+ align-items: center;
+  }
+ .about h2 {
+   font-size: 3em;
+   font-family: var(--headerfont);
+   color: var(--green);
+ margin: 50px 0px 20px 0px;
+   text-align: center;
+  grid-area: title;
+ }
+
+ .about img {
+ height: 200px;
+ width: auto;
+ border-radius: 300px;
+ border: 10px solid var(--green);
+ margin: auto;
+ grid-area: img1;
+ }
+ .about p {
+ font-family: var(--bodyfont);
+   font-size: 1em;
+ grid-area: about;
+  }
+}
